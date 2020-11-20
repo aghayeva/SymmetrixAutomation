@@ -12,8 +12,7 @@ public class Driver {
     // logger - it's more organized sys out.
     private static final Logger logger = Logger.getLogger(Driver.class); // logger from -> log4j
     private static final ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
-    //so no one can create object of Driver class
-    //everyone should call static getter method instead
+    //so no one can create object of Driver class. Everyone should call static getter method instead
     private Driver() {
 
     }

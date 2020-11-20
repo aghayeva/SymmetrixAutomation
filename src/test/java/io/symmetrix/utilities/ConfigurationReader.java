@@ -16,13 +16,13 @@ public class ConfigurationReader {
      * 6. Create public static getProperty() method that returns String and accepts String parameter
      */
 
-        private static Properties properties=new Properties();
+        private static Properties configFile=new Properties();
 
         static {
 
             try {
                 FileInputStream file=new FileInputStream("Configuration.properties");
-                properties.load(file);
+                configFile.load(file);
                 file.close();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -37,6 +37,6 @@ public class ConfigurationReader {
      * @return property value
      */
         public static String getProperty(String keyName) {
-            return properties.getProperty(keyName);
+            return configFile.getProperty(keyName);
         }
 }
